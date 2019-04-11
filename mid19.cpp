@@ -4,7 +4,8 @@
 //Author: Gordon Griesel
 //Date: April 7, 2019
 //Purpose: Framework for a coding exam
-//
+//Edited By: Adolfo Valencia
+//4/11/19
 //See instructions on assignment web page to produce a unit-test
 //for the vec_length function.
 //
