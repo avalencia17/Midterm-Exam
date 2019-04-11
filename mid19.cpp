@@ -148,13 +148,15 @@ const Flt mytest[] = {
             printf("    -------     --------    --------- \n");
             printf("\nProgram complete.\n\n");
             return 0;
-
+                
+                int i=0;
+                Vec w = { mytest[i*2+0], mytest[i*2+1] };
             do{
-                    Flt tolerance = vec_length(w);
-                    printf("%3i %8.5lf  %8.5lf  %10.5lf\n", i+1, w[0], w[1], tol);
-                    ++i;
-                    w[0] = arr[i*2+0];
-                    w[1] = arr[i*2+1];
+                Flt tolerance = vec_length(w);
+                printf("%3i %8.5lf  %8.5lf  %10.5lf\n", i+1, w[0], w[1], tolerance);
+                ++i;
+                w[0] = mytest[i*2+0];
+                w[1] = mytest[i*2+1];
                 }
             while (!(w[0]==0.0 && w[1]==0.0));
 #endif
