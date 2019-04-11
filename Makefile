@@ -1,12 +1,11 @@
-# cs335 lab1
-# to compile your project, type make and press enter
+all: mid19 utest
 
-all: lab1
+mid19: mid19.cpp
+	g++ mid19.cpp -Wall -omid19 -lssl -lcrypto
 
-lab1: lab1.cpp
-	g++ lab1.cpp -Wall -olab1 -lX11 -lGL -lGLU -lm
+utest: mid19.cpp
+	g++ mid19.cpp -Wall -outest -lssl -lcrypto -DPROFILE
 
 clean:
-	rm -f lab1
-	rm -f *.o
-
+	rm -f mid19
+	rm -f utest
